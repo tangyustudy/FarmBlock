@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "ef690778-bd81-4207-ba8e-7cb516ae3986",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "game_shop_disco": {
+      "ver": "1.0.4",
+      "uuid": "434e361d-a9a6-49be-8521-82d3f187ae5d",
+      "rawTextureUuid": "ef690778-bd81-4207-ba8e-7cb516ae3986",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 261,
+      "height": 264,
+      "rawWidth": 261,
+      "rawHeight": 264,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

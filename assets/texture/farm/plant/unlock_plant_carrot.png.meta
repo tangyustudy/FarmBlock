@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "9fe2d95c-35a8-46d4-a696-c757a4c89846",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "unlock_plant_carrot": {
+      "ver": "1.0.4",
+      "uuid": "2cb0d5e6-ed00-4015-be5f-b8e274660adc",
+      "rawTextureUuid": "9fe2d95c-35a8-46d4-a696-c757a4c89846",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -0.5,
+      "offsetY": 0,
+      "trimX": 2,
+      "trimY": 3,
+      "width": 107,
+      "height": 108,
+      "rawWidth": 112,
+      "rawHeight": 114,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "cfd696b9-c9b1-451d-9f0a-fcbbbec74123",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "name_HAMMER": {
+      "ver": "1.0.4",
+      "uuid": "a7c8394d-8d67-466e-aa09-36b5f7bad7f5",
+      "rawTextureUuid": "cfd696b9-c9b1-451d-9f0a-fcbbbec74123",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 318,
+      "height": 79,
+      "rawWidth": 318,
+      "rawHeight": 79,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

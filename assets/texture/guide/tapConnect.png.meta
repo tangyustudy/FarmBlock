@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "a89c0e4f-0b15-430d-98c0-e899a3351981",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "tapConnect": {
+      "ver": "1.0.4",
+      "uuid": "e46f5583-255c-49e0-9e0e-8b7757b706ff",
+      "rawTextureUuid": "a89c0e4f-0b15-430d-98c0-e899a3351981",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 531,
+      "height": 79,
+      "rawWidth": 531,
+      "rawHeight": 79,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

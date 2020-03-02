@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "41677c04-6d32-4aaf-b360-21a536baf316",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "WoodBox": {
+      "ver": "1.0.4",
+      "uuid": "39db9afd-bed7-4cb8-8284-89b5556ee496",
+      "rawTextureUuid": "41677c04-6d32-4aaf-b360-21a536baf316",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 316,
+      "height": 69,
+      "rawWidth": 316,
+      "rawHeight": 69,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "6a99695f-6422-42df-aed6-840030ae8d76",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "unlock_plant_pea": {
+      "ver": "1.0.4",
+      "uuid": "28b6abb7-32a5-46a4-968e-7af5b563d574",
+      "rawTextureUuid": "6a99695f-6422-42df-aed6-840030ae8d76",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0.5,
+      "trimX": 9,
+      "trimY": 2,
+      "width": 94,
+      "height": 109,
+      "rawWidth": 112,
+      "rawHeight": 114,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

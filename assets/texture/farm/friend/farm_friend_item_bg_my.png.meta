@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "7a2ce8a8-3a06-4fe5-bc90-29d875f20b31",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "farm_friend_item_bg_my": {
+      "ver": "1.0.4",
+      "uuid": "564465c4-b65f-4b73-a789-bbbe2efae0d3",
+      "rawTextureUuid": "7a2ce8a8-3a06-4fe5-bc90-29d875f20b31",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 612,
+      "height": 190,
+      "rawWidth": 612,
+      "rawHeight": 190,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

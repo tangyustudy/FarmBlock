@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "24215223-7ba5-436c-81ac-f7bedffda8d3",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "farm_shop_props_bg": {
+      "ver": "1.0.4",
+      "uuid": "745330eb-b73f-416d-aaa8-df71101ec928",
+      "rawTextureUuid": "24215223-7ba5-436c-81ac-f7bedffda8d3",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 273,
+      "height": 319,
+      "rawWidth": 273,
+      "rawHeight": 319,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

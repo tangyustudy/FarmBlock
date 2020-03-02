@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "0a8dba56-3622-4652-8998-a3ddd69b2638",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "name_BOXINGglove": {
+      "ver": "1.0.4",
+      "uuid": "abdb47d1-9196-4d40-997f-60f1adb34d15",
+      "rawTextureUuid": "0a8dba56-3622-4652-8998-a3ddd69b2638",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 499,
+      "height": 77,
+      "rawWidth": 499,
+      "rawHeight": 77,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "02f5c57e-0d36-4e22-9408-981e4f2cec6f",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "coinShop4": {
+      "ver": "1.0.4",
+      "uuid": "ae71e9d4-f08b-4dca-8ecf-d01dc67754c8",
+      "rawTextureUuid": "02f5c57e-0d36-4e22-9408-981e4f2cec6f",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 660,
+      "height": 169,
+      "rawWidth": 660,
+      "rawHeight": 169,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "19361ab4-7ce1-4f30-aa9c-2f920e9465f2",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "unlock_plant_tomato": {
+      "ver": "1.0.4",
+      "uuid": "ea63d569-e312-4841-a0cf-a501f58d1d6a",
+      "rawTextureUuid": "19361ab4-7ce1-4f30-aa9c-2f920e9465f2",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 1,
+      "offsetY": 0,
+      "trimX": 10,
+      "trimY": 12,
+      "width": 94,
+      "height": 90,
+      "rawWidth": 112,
+      "rawHeight": 114,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

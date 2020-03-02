@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "2ee67cfc-3e98-4c6e-8155-dafb2aa08c26",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "level15unlock": {
+      "ver": "1.0.4",
+      "uuid": "fb2b6a3f-418e-428d-83dc-8e6d12868a0f",
+      "rawTextureUuid": "2ee67cfc-3e98-4c6e-8155-dafb2aa08c26",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 218,
+      "height": 28,
+      "rawWidth": 218,
+      "rawHeight": 28,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

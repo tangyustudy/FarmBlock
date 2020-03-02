@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "6621c718-3c9c-4bd1-88c5-002f80f99fb5",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "forum": {
+      "ver": "1.0.4",
+      "uuid": "2df8b5e2-9f2f-476e-a526-4ec3acb330aa",
+      "rawTextureUuid": "6621c718-3c9c-4bd1-88c5-002f80f99fb5",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 132,
+      "height": 117,
+      "rawWidth": 132,
+      "rawHeight": 117,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

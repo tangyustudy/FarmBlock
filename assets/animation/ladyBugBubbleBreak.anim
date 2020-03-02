@@ -1,0 +1,55 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "ladyBugBubbleBreak",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.62,
+  "sample": 50,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "35d0ed10-06e2-45dc-9765-8cad3417f723"
+            }
+          },
+          {
+            "frame": 0.16,
+            "value": {
+              "__uuid__": "770e0c64-4095-496e-bca5-827f24665f71"
+            }
+          },
+          {
+            "frame": 0.28,
+            "value": {
+              "__uuid__": "ecdd1462-3530-4f9e-99b3-114ff1c4cd62"
+            }
+          },
+          {
+            "frame": 0.38,
+            "value": {
+              "__uuid__": "cbae2153-ae6d-46d2-b12b-666fa91c6509"
+            }
+          },
+          {
+            "frame": 0.46,
+            "value": {
+              "__uuid__": "c1320380-1040-4c7d-a0d1-e35fdca51016"
+            }
+          },
+          {
+            "frame": 0.6,
+            "value": {
+              "__uuid__": "05fb407b-ee63-4c90-b0ba-e11043ccbe82"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}
