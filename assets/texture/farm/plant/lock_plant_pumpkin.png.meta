@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "6d8d181c-3300-4ede-bd5d-a72dbbf2d97a",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "lock_plant_pumpkin": {
+      "ver": "1.0.4",
+      "uuid": "5a2bd41c-6adb-4082-ad6e-6366b7ae0a17",
+      "rawTextureUuid": "6d8d181c-3300-4ede-bd5d-a72dbbf2d97a",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -1,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 8,
+      "width": 110,
+      "height": 98,
+      "rawWidth": 112,
+      "rawHeight": 114,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

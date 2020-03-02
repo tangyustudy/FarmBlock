@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "eb80796a-3401-4336-aff8-5d16e96a4ce3",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "unlock_plant_pepper": {
+      "ver": "1.0.4",
+      "uuid": "551797d2-e514-45ad-9a5e-fe6db52fc832",
+      "rawTextureUuid": "eb80796a-3401-4336-aff8-5d16e96a4ce3",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 11,
+      "trimY": 5,
+      "width": 90,
+      "height": 104,
+      "rawWidth": 112,
+      "rawHeight": 114,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

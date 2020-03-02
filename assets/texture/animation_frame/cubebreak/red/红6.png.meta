@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "4d0803e0-c165-4483-ab63-6420c03f9e01",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "红6": {
+      "ver": "1.0.4",
+      "uuid": "756647e8-1b38-4928-aedd-97fca36cc225",
+      "rawTextureUuid": "4d0803e0-c165-4483-ab63-6420c03f9e01",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 2,
+      "offsetY": 106.5,
+      "trimX": 99,
+      "trimY": 99,
+      "width": 96,
+      "height": 127,
+      "rawWidth": 290,
+      "rawHeight": 538,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

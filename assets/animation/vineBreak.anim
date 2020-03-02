@@ -1,0 +1,55 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "vineBreak",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.43333333333333335,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "6c2e43a8-055b-4a95-b127-745e890fd0fa"
+            }
+          },
+          {
+            "frame": 0.08333333333333333,
+            "value": {
+              "__uuid__": "9254598f-858f-4cf7-ad74-2304618717d2"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "30df68e8-40a2-496d-93ab-d04ed90aeed5"
+            }
+          },
+          {
+            "frame": 0.25,
+            "value": {
+              "__uuid__": "0588559e-eb81-4ce2-8b38-bab324044edf"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "dbe1019a-e6b6-4b07-af8a-bdafd6459eab"
+            }
+          },
+          {
+            "frame": 0.4166666666666667,
+            "value": {
+              "__uuid__": "59b1aa9a-cbd1-46f8-9dbb-b47c697a663a"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

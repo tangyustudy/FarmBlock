@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "2ce8d86e-c5c5-463d-93f2-4a2ebad349f0",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "lock_plant_tomato": {
+      "ver": "1.0.4",
+      "uuid": "e06ae0da-dfa4-43bd-a4ab-ef5cd0dd11a4",
+      "rawTextureUuid": "2ce8d86e-c5c5-463d-93f2-4a2ebad349f0",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 1,
+      "offsetY": 0,
+      "trimX": 10,
+      "trimY": 12,
+      "width": 94,
+      "height": 90,
+      "rawWidth": 112,
+      "rawHeight": 114,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

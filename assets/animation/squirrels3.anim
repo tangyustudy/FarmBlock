@@ -1,0 +1,61 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "squirrels3",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 1.42,
+  "sample": 50,
+  "speed": 0.5,
+  "wrapMode": "2",
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "77890014-812c-4b38-a18c-05eebe99a370"
+            }
+          },
+          {
+            "frame": 0.1,
+            "value": {
+              "__uuid__": "446a24b3-29ed-4a7f-a72f-36c8d29b7d05"
+            }
+          },
+          {
+            "frame": 0.2,
+            "value": {
+              "__uuid__": "56c2bea1-66f5-4426-b6f1-5d5f525fcc45"
+            }
+          },
+          {
+            "frame": 0.3,
+            "value": {
+              "__uuid__": "77467138-f731-4796-b293-1491fcad2539"
+            }
+          },
+          {
+            "frame": 0.4,
+            "value": {
+              "__uuid__": "a6bae852-dde2-491d-a9c8-b8261ee2b286"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "b5c1248c-7835-4f52-9e53-49458a113c7c"
+            }
+          },
+          {
+            "frame": 1.4,
+            "value": {
+              "__uuid__": "c9c9e702-c4b6-4be2-bfec-3685affa6a3e"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

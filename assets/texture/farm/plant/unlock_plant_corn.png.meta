@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "805cd850-072b-415f-8d0c-d0a2de51a13a",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "unlock_plant_corn": {
+      "ver": "1.0.4",
+      "uuid": "81180de8-5642-47b4-9593-a6411a4f0f28",
+      "rawTextureUuid": "805cd850-072b-415f-8d0c-d0a2de51a13a",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0.5,
+      "trimX": 8,
+      "trimY": 1,
+      "width": 96,
+      "height": 111,
+      "rawWidth": 112,
+      "rawHeight": 114,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

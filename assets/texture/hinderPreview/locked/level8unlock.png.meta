@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "32466f3b-630c-4233-99aa-017ddc97f304",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "level8unlock": {
+      "ver": "1.0.4",
+      "uuid": "5ee557c3-f9b4-46b2-ac04-0d9b06c3460d",
+      "rawTextureUuid": "32466f3b-630c-4233-99aa-017ddc97f304",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 208,
+      "height": 28,
+      "rawWidth": 208,
+      "rawHeight": 28,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

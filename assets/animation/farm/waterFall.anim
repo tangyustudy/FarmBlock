@@ -1,0 +1,55 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "waterFall",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.43333333333333335,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "6433f2aa-ddd6-4115-99c6-8e851047b9d8"
+            }
+          },
+          {
+            "frame": 0.08333333333333333,
+            "value": {
+              "__uuid__": "f317f36a-b05d-47a2-8bdc-55d6226e2f90"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "cd023762-3b04-4824-9ac7-7af307d93932"
+            }
+          },
+          {
+            "frame": 0.25,
+            "value": {
+              "__uuid__": "04fb4dda-b0c5-4494-923d-4ba98316fd91"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "cc985e62-2c3a-4422-a7bb-723e2b2afa99"
+            }
+          },
+          {
+            "frame": 0.4166666666666667,
+            "value": {
+              "__uuid__": "51cb5de9-4813-4f4a-a755-29cd3de97ee6"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

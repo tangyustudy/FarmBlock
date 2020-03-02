@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "a71c58a9-de38-4270-8489-814369008bb7",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "ALLOFTHECUBES!": {
+      "ver": "1.0.4",
+      "uuid": "bb277479-d930-4917-ab53-89154a2e64db",
+      "rawTextureUuid": "a71c58a9-de38-4270-8489-814369008bb7",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 265,
+      "height": 28,
+      "rawWidth": 265,
+      "rawHeight": 28,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

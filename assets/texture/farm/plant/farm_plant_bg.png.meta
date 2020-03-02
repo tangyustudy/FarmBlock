@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "23409bf8-dfe5-464b-9f94-e3973dfa22cb",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "farm_plant_bg": {
+      "ver": "1.0.4",
+      "uuid": "a44ebb83-b30c-4e7d-ac7d-675133bdd621",
+      "rawTextureUuid": "23409bf8-dfe5-464b-9f94-e3973dfa22cb",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 176,
+      "height": 176,
+      "rawWidth": 176,
+      "rawHeight": 176,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

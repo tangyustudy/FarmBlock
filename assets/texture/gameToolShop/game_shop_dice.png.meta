@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "9b87a7d3-c146-4495-a95c-d034ae0405f4",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "game_shop_dice": {
+      "ver": "1.0.4",
+      "uuid": "606db3fc-e4d6-4ab0-a233-b4fb08c5312e",
+      "rawTextureUuid": "9b87a7d3-c146-4495-a95c-d034ae0405f4",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -2,
+      "offsetY": 3,
+      "trimX": 14,
+      "trimY": 12,
+      "width": 188,
+      "height": 190,
+      "rawWidth": 220,
+      "rawHeight": 220,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

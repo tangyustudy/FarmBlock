@@ -1,0 +1,61 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "woodCubeBreak",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.6,
+  "sample": 60,
+  "speed": 1.5,
+  "wrapMode": "1",
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "10b06512-7436-498e-91c7-aa5ed0aaac32"
+            }
+          },
+          {
+            "frame": 0.08333333333333333,
+            "value": {
+              "__uuid__": "1e0f0f91-2cc5-4436-bcfa-18c83bd68ad0"
+            }
+          },
+          {
+            "frame": 0.18333333333333332,
+            "value": {
+              "__uuid__": "7c2e458c-2a90-4ddd-9d67-cca4faf55b6d"
+            }
+          },
+          {
+            "frame": 0.2833333333333333,
+            "value": {
+              "__uuid__": "74a0cf11-e521-4f3f-a40d-bd4e4bfd1c29"
+            }
+          },
+          {
+            "frame": 0.38333333333333336,
+            "value": {
+              "__uuid__": "b47c1c72-5358-4a55-aed3-9acea306bd23"
+            }
+          },
+          {
+            "frame": 0.48333333333333334,
+            "value": {
+              "__uuid__": "ba159d8f-1432-4719-ba95-3cf4960186ab"
+            }
+          },
+          {
+            "frame": 0.5833333333333334,
+            "value": {
+              "__uuid__": "468808bd-326b-4e75-88b9-6115944ab1c8"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}
