@@ -40,18 +40,31 @@ cc.Class({
         // 播动画
         this.playUnlockAnimation(this.node_unlockAnimation);
 
-        console.log(type, '43,plantunlock');
+        // console.log(type, '43,plantunlock');
 
         this.changeSpriteView(this.node_view, this.viewList, type);
         let name = FarmData.plantInfo[type].name;
         this.changeLabelContent(this.node_name, name);
+        this.viewNodeBreathEffect(this.node_view);
     },
+
+    // 展示节点的呼吸效果
+    viewNodeBreathEffect(node) {
+        let action = cc.sequence(
+            cc.scaleTo(0.2, 0.85),
+            cc.scaleTo(0.4, 1.15),
+            cc.scaleTo(0.2, 1)
+        ).repeatForever();
+        node.runAction(action);
+    },
+
 
     hideView() {
         this.node_unlockAnimation.active = false;
         // 关闭界面，增送种子。
         this.node.active = false;
         this.sendRequestToAnimaLayer();
+        this.node_view.stopAllActions();
 
     },
 
@@ -83,7 +96,7 @@ cc.Class({
 
 
     start() {
-
+        this.showView(1);
     },
 
     // update (dt) {},

@@ -490,7 +490,7 @@ cc.Class({
             if (!Utils.indexOfV2(this.tempPos, pos)) {
                 this.tempPos.push(pos);
             } else {
-                console.log(pos, this.tempPos, '354');
+                // console.log(pos, this.tempPos, '354');
                 return;
             }
         }
@@ -1323,7 +1323,7 @@ cc.Class({
                 level: 3
             })
             cc.systemEvent.emit('GAMEMASK_CONTROL', { order: 2 });
-            console.log('helloworld');
+            // console.log('helloworld');
         }
     },
 

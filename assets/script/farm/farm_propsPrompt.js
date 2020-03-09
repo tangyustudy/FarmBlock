@@ -10,6 +10,7 @@ cc.Class({
         item_props: cc.Prefab,
         node_touchNode1: cc.Node,
         node_touchNode2: cc.Node,
+        scrollView: cc.ScrollView,
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -25,6 +26,7 @@ cc.Class({
         this.initPropContainer();
         this.node.active = true;
         this.nodeFadeIn();
+        this.scrollView.scrollToTop(0.1);
     },
 
     initPropContainer() {
@@ -131,7 +133,7 @@ cc.Class({
 
 
     // 显示农场引导
-    showFarmGuide(){
+    showFarmGuide() {
         cc.systemEvent.emit('SHOW_FARM_GUIDE');
     },
 

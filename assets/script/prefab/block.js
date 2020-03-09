@@ -659,7 +659,7 @@ cc.Class({
 
 
     test() {
-        console.log('1111111fuck');
+        // console.log('1111111fuck');
     },
 
     start() {

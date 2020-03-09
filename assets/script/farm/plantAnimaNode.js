@@ -30,16 +30,24 @@ cc.Class({
             children[i].active = true;
             this.plantMoveAnimation(children[i], 0.5 + 0.1 * i);
         }
+
     },
 
-     //关闭植物的缓动动画 
-     endPlantAnimation() {
+    // 停止所有动画，回复植物原来大小
+    stopAnimaAndResume() {
         let children = this.node.children;
         for (let i = children.length - 1; i >= 0; i--) {
-           
+            children[i].stopAllActions();
+            children[i].scale = 1;
+        }
+    },
+
+    //关闭植物的缓动动画 
+    endPlantAnimation() {
+        let children = this.node.children;
+        for (let i = children.length - 1; i >= 0; i--) {
             children[i].active = false;
             children[i].stopAllActions();
-
         }
     },
 
@@ -76,12 +84,13 @@ cc.Class({
      * @param {Number} type 植物类型 
      * @param {Number} statue  植物的生长状态
      */
-    changePlantTexture(type, statue, index) {
+    changePlantTexture(type, statue, index, reap) {
+        // console.log(type, statue, index, '80');
         if (!!index) {
             this.index = index;
         }
         if (typeof this.statue == 'undefined') {
-            console.log(this.statue, statue);
+            // console.log(this.statue, statue);
             this.statue = -1;
         } else {
             if (this.statue >= 0 && this.statue == statue) {
@@ -98,13 +107,15 @@ cc.Class({
             this.fadeInFromSmall(children[i]);
         }
         this.scheduleOnce(function () {
-            this.startPlantAnimation();
+            if (!reap) {
+                this.startPlantAnimation();
+            } else {
+                this.stopAnimaAndResume();
+            }
+
         }, 1.5);
 
     },
-
-
-
 
 
     // 从小到大 从透明开始显示
@@ -112,14 +123,12 @@ cc.Class({
         node.opacity = 0;
         node.scale = 0.1;
         let action = cc.spawn(
-            cc.fadeIn(0.8),
+            cc.fadeIn(0.2),
             cc.scaleTo(0.8, 1),
         );
         node.runAction(action);
-        console.log('11111111111111111');
+        // console.log('11111111111111111');
     },
-
-
 
 
     // 隐藏节点
@@ -128,12 +137,12 @@ cc.Class({
         this.node.active = false;
     },
 
-    fadeOut(){
+    fadeOut() {
         this.endPlantAnimation1();
         this.scheduleOnce(
-            function(){
-                this.node.active=false;
-            },1.5
+            function () {
+                this.node.active = false;
+            }, 1.5
         )
     },
 

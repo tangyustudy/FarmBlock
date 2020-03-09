@@ -83,7 +83,7 @@ cc.Class({
 
         // this.data.help+=1;
         // this.updateHelpCount(this.data.help);
-        console.log(this.data.index, '81');
+        // console.log(this.data.index, '81');
         if(this.data.self==1){
             console.log('you can not help yourself!');
         }else{

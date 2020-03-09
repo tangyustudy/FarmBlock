@@ -27,8 +27,19 @@ cc.Class({
     },
 
     updatePlantNumber(event) {
+        // console.log(event, '30');
         this.updateLabelString(event.number, this.label_plant_number);
         if (event.number == 0) {
+            this.scheduleOnce(
+                function () {
+                    if (cc.director.currentPlantIndex >= 0) {
+                        cc.systemEvent.emit('SHOW_WORD_NOTICE', { code: 1010 });
+                    } else if (cc.director.currentPropsIndex >= 0) {
+                        cc.systemEvent.emit('SHOW_WORD_NOTICE', { code: 1011 });
+                    }
+                }, 1.5
+            );
+
             this.scheduleOnce(function () {
                 this.showPromptByMode();
             }, delayTime);

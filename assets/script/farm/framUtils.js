@@ -339,21 +339,28 @@ function numberRoll(node, addNumber, callback) {
     }
     let label = node.getComponent(cc.Label);
     let number = parseInt(label.string);
+    console.log('utils', number, addNumber);
     let quotient = Math.floor(addNumber / 20);
     let oneOfAll, len, rest = 0, isAddRest = false;
-    if (quotient > 1) {
+    if (Math.abs(quotient) > 1) {
         oneOfAll = quotient;
         len = 20;
         rest = addNumber - 20 * oneOfAll;
         isAddRest = true;
     } else {
-        oneOfAll = 1;
-        len = addNumber;
+        if (addNumber > 0) {
+            oneOfAll = 1;
+        } else {
+            oneOfAll = -1;
+        }
+
+        len = Math.abs(addNumber);
     }
 
     for (let i = 0; i < len; i++) {
         setTimeout(
             function () {
+                console.log('cnmb');
                 number += oneOfAll;
                 if (i == len - 1 && rest > 0 && isAddRest) {
                     number += rest;
@@ -362,7 +369,7 @@ function numberRoll(node, addNumber, callback) {
                 if (i == len - 1 && !!callback) {
                     callback();
                 }
-            }, 0.05 * i
+            }, 50 * i
         )
     }
 

@@ -29,6 +29,8 @@ cc.Class({
         list_btnCoins: [cc.SpriteFrame],
         node_coinsNumber: cc.Node,
         node_diamondNumber: cc.Node,
+        node_btn_add: cc.Node,
+        node_btn_reduce: cc.Node,
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -58,6 +60,20 @@ cc.Class({
         node.runAction(action);
     },
 
+    // 按钮的点击效果
+    btnClickEffect(node, callback) {
+        let action = cc.sequence(
+            cc.scaleTo(0.1, 0.85),
+            cc.scaleTo(0.1, 1),
+            cc.callFunc(function () {
+                if (!!callback) {
+                    callback();
+                }
+            })
+        );
+        node.runAction(action);
+    },
+
 
     hideView() {
         this.node.active = false;
@@ -70,7 +86,7 @@ cc.Class({
         this.changeSpriteView(this.node_icon, this.list_cost, 1)
         this.changeSpriteView(this.node_btnDiamond, this.list_btnDiamond, 0);
         this.changeSpriteView(this.node_btnCoins, this.list_btnCoins, 1);
-        this.unitConvert(100, this.changeMode);
+        this.unitConvert(0, this.changeMode);
 
     },
 
@@ -80,7 +96,7 @@ cc.Class({
         this.changeSpriteView(this.node_icon, this.list_cost, 0);
         this.changeSpriteView(this.node_btnDiamond, this.list_btnDiamond, 1);
         this.changeSpriteView(this.node_btnCoins, this.list_btnCoins, 0);
-        this.unitConvert(10000, this.changeMode);
+        this.unitConvert(0, this.changeMode);
     },
 
     // 更新节点纹理
@@ -108,6 +124,7 @@ cc.Class({
     },
 
     addExchangeNumber() {
+        this.btnClickEffect(this.node_btn_add);
         if (this.changeMode == 1) {
             this.exchangeNumber += 100;
         } else if (this.changeMode == 2) {
@@ -116,8 +133,80 @@ cc.Class({
         this.unitConvert(this.exchangeNumber, this.changeMode);
     },
 
-    reduceExchangeNumber() {
+    addNumber(touchCounter) {
+        if (this.changeMode == 1) {
+            if (this.exchangeNumber < Math.floor(this.coinsNumberMax / 500)) {
+                if (touchCounter <= 3) {
+                    this.exchangeNumber++;
+                } else {
 
+                    this.exchangeNumber += Math.ceil((touchCounter - 3) * 1.003);
+                    if (this.exchangeNumber >= Math.floor(this.coinsNumberMax / 500)) {
+                        this.exchangeNumber = Math.floor(this.coinsNumberMax / 500);
+                    }
+                }
+            } else {
+                this.exchangeNumber = Math.floor(this.coinsNumberMax / 500);
+            }
+
+        } else if (this.changeMode == 2) {
+
+            if (this.exchangeNumber < this.diamondNumberMax * 500) {
+                if (touchCounter <= 3) {
+                    this.exchangeNumber += 500;
+                } else {
+
+                    this.exchangeNumber += Math.floor((touchCounter - 3) * 1.003) * 500;
+                    if (this.exchangeNumber >= this.diamondNumberMax * 500) {
+                        this.exchangeNumber = this.diamondNumberMax * 500;
+                    }
+                }
+            } else {
+                this.exchangeNumber = this.diamondNumberMax * 500;
+            }
+        }
+
+        this.unitConvert(this.exchangeNumber, this.changeMode);
+    },
+
+
+    reduceNumber(touchCounter) {
+        if (this.changeMode == 1) {
+            if (this.exchangeNumber > 0) {
+                if (touchCounter <= 3) {
+                    this.exchangeNumber--;
+                } else {
+
+                    this.exchangeNumber -= Math.ceil((touchCounter - 3) * 1.003);
+                    if (this.exchangeNumber <= 0) {
+                        this.exchangeNumber = 0;
+                    }
+                }
+            } else {
+                this.exchangeNumber = 0;
+            }
+        } else if (this.changeMode == 2) {
+            if (this.exchangeNumber > 0) {
+                if (touchCounter <= 3) {
+                    this.exchangeNumber -= 500;
+                } else {
+
+                    this.exchangeNumber -= Math.ceil((touchCounter - 3) * 1.003) * 500;
+                    if (this.exchangeNumber <= 0) {
+                        this.exchangeNumber = 0;
+                    }
+                }
+            } else {
+                this.exchangeNumber = 0;
+            }
+        }
+
+        this.unitConvert(this.exchangeNumber, this.changeMode);
+    },
+
+
+    reduceExchangeNumber() {
+        this.btnClickEffect(this.node_btn_reduce);
         if (this.changeMode == 1) {
             if (this.exchangeNumber <= 100) {
                 return;
@@ -144,24 +233,28 @@ cc.Class({
                 farmInfo.coin -= this.oringeNumber;
                 FarmUtils.setLocalData(farmInfo, 'localFarmInfo');
                 // 更新金币和钻石的展示
-                this.updateCoinsAndDiamondDisplay();
-                cc.systemEvent.emit('UPDATE_FARM_COINS', { coins: -this.oringeNumber });
+                // this.updateCoinsAndDiamondDisplay();
+                cc.systemEvent.emit('UPDATE_FARM_COINS', { number: -this.oringeNumber });
                 cc.systemEvent.emit('SHOW_WORD_NOTICE', { code: 1007 });
+                FarmUtils.numberRoll(this.node_coinsNumber, -this.oringeNumber, this.updateCoinsAndDiamondDisplay.bind(this));
+                FarmUtils.numberRoll(this.node_diamondNumber, this.exchangeNumber, this.updateCoinsAndDiamondDisplay.bind(this));
             } else {
                 // 提示金币不够
                 cc.systemEvent.emit('SHOW_WORD_NOTICE', { code: 1006 });
             }
 
         } else {
-            if (diamond > this.oringeNumber) {
+            if (diamond >= this.oringeNumber) {
                 farmInfo.coin += this.exchangeNumber;
                 diamond -= this.oringeNumber;
                 FarmUtils.saveCoins(diamond);
                 FarmUtils.setLocalData(farmInfo, 'localFarmInfo');
                 // 更新金币和钻石的展示
-                this.updateCoinsAndDiamondDisplay();
-                cc.systemEvent.emit('UPDATE_FARM_COINS', { coins: this.exchangeNumber });
+                // this.updateCoinsAndDiamondDisplay();
+                cc.systemEvent.emit('UPDATE_FARM_COINS', { number: this.exchangeNumber });
                 cc.systemEvent.emit('SHOW_WORD_NOTICE', { code: 1007 });
+                FarmUtils.numberRoll(this.node_coinsNumber, this.exchangeNumber, this.updateCoinsAndDiamondDisplay.bind(this));
+                FarmUtils.numberRoll(this.node_diamondNumber, -this.oringeNumber, this.updateCoinsAndDiamondDisplay.bind(this));
             } else {
                 // 提示钻石不够
                 cc.systemEvent.emit('SHOW_WORD_NOTICE', { code: 1005 });
@@ -178,6 +271,8 @@ cc.Class({
         let coin = FarmUtils.getObjectProperty('localFarmInfo', 'coin');
         this.changeLabelContent(this.node_diamondNumber, diamond);
         this.changeLabelContent(this.node_coinsNumber, coin);
+        this.diamondNumberMax = diamond;
+        this.coinsNumberMax = coin;
     },
 
 

@@ -48,7 +48,7 @@ cc.Class({
 
     // 显示网络缓存动画
     showNetCacheAnimation() {
-        console.log('helloworld')
+        // console.log('helloworld')
         this.netCacheNode.active = true;
         this.anima = this.netCacheNode.getComponent(cc.Animation);
         this.anima.play('cache');
@@ -145,11 +145,11 @@ cc.Class({
     // 开启农场背景音乐
     startFarmBgm() {
         let isBgmOn = cc.sys.localStorage.getItem('bgm');
-        console.log(isBgmOn, 'farm_tips');
+        // console.log(isBgmOn, 'farm_tips');
         if (isBgmOn) {
             this.voice_bgm.play();
         } else {
-            console.log('fuck music!');
+            // console.log('fuck music!');
         }
 
     },

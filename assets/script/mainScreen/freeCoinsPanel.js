@@ -76,7 +76,7 @@ cc.Class({
                     }
 
                 }else if(name=='farm'){
-                    console.log('farm scene!');
+                    // console.log('farm scene!');
                 }
 
             }
@@ -92,7 +92,7 @@ cc.Class({
             }else  if (name == 'gameView') {
                 cc.systemEvent.emit('GAMEVIEW_TIPS', { wordIndex: 0 });
             }else   if(name=='farm'){
-                console.log('farm scene11111!');
+                // console.log('farm scene11111!');
             }
 
 

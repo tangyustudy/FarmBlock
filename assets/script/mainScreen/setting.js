@@ -139,7 +139,7 @@ cc.Class({
                 // console.log('不可以改名');
             }
         } else {
-            console.log('可以改名')
+            // console.log('可以改名')
         }
     },
 

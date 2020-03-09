@@ -28,7 +28,7 @@ cc.Class({
 
     initFriendContainer() {
         let list = this.friendList;
-        console.log(this.friendList);
+        // console.log(this.friendList);
         if (!list || list.length <= 0) {
 
             // todo   这里需要有明确的提示
@@ -69,7 +69,7 @@ cc.Class({
         let count = event.detail.count;
         let id = event.detail.id;
         let actionMove = this.getHelpTime();
-        console.log(count, '54');
+        // console.log(count, '54');
         if (actionMove > 0 && count < 5) {
             actionMove--;
             cc.sys.localStorage.setItem('helpLimited', actionMove);
@@ -92,7 +92,7 @@ cc.Class({
 
             // 保存用户的操作行为
             // this.saveUserOperate(event.detail);
-            console.log(data);
+            // console.log(data);
             this.saveUserOperate(data);
         } else {
             cc.log('error:sorry,you have no action moves or had finished help!');
@@ -140,7 +140,7 @@ cc.Class({
         if (this.needSubmitData.length <= 0) {
             return;
         }
-        console.log(JSON.stringify(this.needSubmitData));
+        // console.log(JSON.stringify(this.needSubmitData));
         FarmUtils.updateFarmData(2, JSON.stringify(this.needSubmitData), 0);
         this.needSubmitData = [];
     },

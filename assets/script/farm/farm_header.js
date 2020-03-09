@@ -23,7 +23,7 @@ cc.Class({
     updateProgressBar(event) {
         this.progressBar.progress = event.num;
 
-        console.log(event.num, 'progerssBar 25');
+        // console.log(event.num, 'progerssBar 25');
         this.icon.runAction(
             cc.sequence(
                 cc.scaleTo(0.2, 1.1),
@@ -58,14 +58,21 @@ cc.Class({
     updateCoins(event) {
         let self = this;
         // let callback = function () {
+        // console.log('event', event);
         if (event.number == 0) {
             let coins = FarmUtils.getObjectProperty('localFarmInfo', 'coin');
             if (!coins) {
                 coins = 0;
             }
-            self.label_coins.string = new String(coins);
+            this.label_coins.string = new String(coins);
         } else {
-            FarmUtils.numberRoll(this.label_coins, event.number);
+            FarmUtils.numberRoll(this.label_coins, event.number, function () {
+                let coins = FarmUtils.getObjectProperty('localFarmInfo', 'coin');
+                if (!coins) {
+                    coins = 0;
+                }
+                this.label_coins.string = new String(coins);
+            }.bind(this));
         }
 
         // };

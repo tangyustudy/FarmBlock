@@ -27,6 +27,9 @@ cc.Class({
         node_btn_sellAll: cc.Node,
 
         node_farmer: cc.Node,
+
+        node_btn_add: cc.Node,
+        node_btn_reduce: cc.Node,
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -115,8 +118,8 @@ cc.Class({
 
     // 显示
     showItemPrompt(data) {
-
-        this.itemCount = data.number;
+        this.itemNumberMax = data.number;
+        this.itemCount = 1;
         this.mask.active = true;
         this.node_prompt.active = true;
         FarmUtils.showPromptWithScale(this.node_prompt);
@@ -130,6 +133,57 @@ cc.Class({
         this.node_prompt.active = false;
 
     },
+
+    test(event) {
+        console.log(event, '1111111111111');
+    },
+
+    /**
+    * 处理长按逻辑
+    *
+    * @param touchCounter 本次长按触摸次数
+    * @param customEventData 在属性检查器中传入进来的 CustomEventData
+    */
+    handleMiddleBtnTouchLogic(touchCounter, customEventData) {
+        // 这里演示效果为：
+        //  如果长按回调次数小于等于3次的，那么 累计次数 = 累计次数 + 1
+        //  如果长按回调次数大于3次的，那么 累计次数 = 累计次数 + 权重公式后的结果
+        if (touchCounter <= 3) {
+            this.counter++;
+        } else {
+            // PS: 实际使用，开发者需要根据自己的期望权重递增公司来编写，这里仅为演示
+            this.counter += Math.ceil((touchCounter - 3) * 1.003);
+        }
+        // this.label_prompt_number.string = `累计计数 ${this.counter} 次`;
+    },
+
+    addNumber(touchCounter) {
+        if (this.itemCount < this.itemNumberMax) {
+            if (touchCounter <= 3) {
+                this.itemCount++;
+            } else {
+
+                this.itemCount += Math.ceil((touchCounter - 3) * 1.003);
+            }
+        } else {
+            this.itemCount = this.itemNumberMax;
+        }
+        this.label_prompt_number.string = this.itemCount + '';
+        this.label_btn_sell_price.string = this.itemCount * this.data.price + '';
+    },
+
+    reduceNumber(touchCounter) {
+        if (this.itemCount > 0) {
+            if (touchCounter <= 3) {
+                this.itemCount--;
+            } else {
+                this.itemCount = 0;
+            }
+        }
+        this.label_prompt_number.string = this.itemCount + '';
+        this.label_btn_sell_price.string = this.itemCount * this.data.price + '';
+    },
+
 
 
     // 初始化仓库

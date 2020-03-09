@@ -13,6 +13,7 @@ cc.Class({
 
     properties: {
         label_expNumber: cc.Label,
+        node_name_exp: cc.Node,
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -20,10 +21,13 @@ cc.Class({
     // onLoad () {},
 
     updateExpNumber(num) {
-        this.label_expNumber.string = new String(num);
-        this.label_expNumber.node.getComponent(cc.Widget).left = 20;
-        // let expIcon = this.label_expNumber.node.getChildByName('expNumber');
-        // expIcon.getComponent(cc.Widget).left = 50;
+        this.label_expNumber.string = '.' + num;
+        let widget = this.label_expNumber.node.getComponent(cc.Widget);
+        widget.left = 30;
+        widget.updateAlignment();
+        let widget1 = this.node_name_exp.getComponent(cc.Widget);
+        widget1.right = -30;
+        widget1.updateAlignment();
     },
 
 

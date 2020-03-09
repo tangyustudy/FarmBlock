@@ -13,7 +13,7 @@ cc.Class({
 
     properties: {
         view: cc.Node,
-        list_view:[cc.SpriteFrame],
+        list_view: [cc.SpriteFrame],
         label_number: cc.Label,
     },
 
@@ -34,35 +34,52 @@ cc.Class({
     updateNumber(num) {
         if (typeof num == 'number') {
             this.label_number.string = '' + num;
-        }else{
+        } else {
             cc.log('The params is not number!');
         }
     },
 
     // 更新纹理
-    updateView(type){
-        if(typeof type=='number'){
+    updateView(type) {
+        if (typeof type == 'number') {
             this.view.getComponent(cc.Sprite).spriteFrame = this.list_view[type];
         }
     },
 
     onTouchEnd() {
         let event = new cc.Event.EventCustom('click_item', true);
-        event.detail  = {
-            index:this.data.index,
-            number:this.data.number,
-            type:this.data.type,
+        event.detail = {
+            index: this.data.index,
+            number: this.data.number,
+            type: this.data.type,
         }
-        this.node.dispatchEvent(event);
+        this.btnClickEffect(this.view);
+        this.scheduleOnce(
+            function () {
+                this.node.dispatchEvent(event);
+            }, 0.2
+        )
+
         cc.director.currentPlantIndex = this.data.type;
+    },
+
+
+    btnClickEffect(node, callback) {
+        let action = cc.sequence(
+            cc.scaleTo(0.1, 0.85),
+            cc.scaleTo(0.1, 1),
+            cc.callFunc(function () {
+                if (!!callback) {
+                    callback();
+                }
+            })
+        );
+        node.runAction(action);
     },
 
 
 
 
-
-
-    
 
 
 

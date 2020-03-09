@@ -75,7 +75,7 @@ cc.Class({
     updateInfo() {
         let data = GameData.getGameData();
         Utils.updateGameInfo(data);
-        console.log('event_onGameHide');
+        // console.log('event_onGameHide');
     },
 
 
@@ -115,7 +115,7 @@ cc.Class({
         uid = '109';
         if (uid == '') {
             cc.director.gameLoadingSuccess = true;
-            console.log('error : login failed');
+            // console.log('error : login failed');
             // this.jumpToMainScreen();
         } else {
             cc.director.ServerManager.login(1, uid, params, callback);
@@ -128,7 +128,7 @@ cc.Class({
         if (data.code == 0) {
             cc.director.gameLoadingSuccess = true;
         }
-        console.log(detail, 'loading,112');
+        // console.log(detail, 'loading,112');
         let timeStamp = detail.lasttime;
         let localData = cc.sys.localStorage.getItem('localData');
         if (!localData) {
@@ -163,7 +163,7 @@ cc.Class({
 
     // 数据同步
     dataSync(data) {
-        console.log(data, 'loading ,134');
+        // console.log(data, 'loading ,134');
         // 最高等级 
         GameData.bestLevel = data.level;
         // 星星总数
@@ -188,7 +188,7 @@ cc.Class({
             }
 
         } else {
-            console.log('data.data is not exist!!');
+            // console.log('data.data is not exist!!');
         }
 
         // 保存数据

@@ -72,7 +72,7 @@ cc.Class({
 
     updateUserName(name){
         if(typeof name =='string'){
-            console.log(name)
+            // console.log(name)
             this.userName.string = decodeURIComponent(name);
             // this.userName.string =name;
         }else{

@@ -10,6 +10,7 @@ cc.Class({
         item_plant_seed: cc.Prefab,
         node_touchNode1: cc.Node,
         node_touchNode2: cc.Node,
+        scrollView: cc.ScrollView,
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -69,6 +70,7 @@ cc.Class({
     },
 
     showView() {
+        this.scrollView.scrollToTop(0.1);
         this.initPlantContainer();
         this.node.active = true;
         this.nodeFadeIn();
@@ -140,7 +142,7 @@ cc.Class({
     },
 
     // 显示农场引导
-    showFarmGuide(){
+    showFarmGuide() {
         cc.systemEvent.emit('SHOW_FARM_GUIDE');
     },
 

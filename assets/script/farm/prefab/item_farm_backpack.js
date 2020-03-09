@@ -19,7 +19,7 @@ cc.Class({
 
 
     initItem(data) {
-        console.log(data);
+        // console.log(data);
         this.data = data;
         this.updateView(data.type);
         // this.updateEffectTime(data.type);

@@ -47,7 +47,7 @@ cc.Class({
         let uid;
         if (!localData) {
             uid = window.NativeManager.getUid();
-            console.log('localData is not exist');
+            // console.log('localData is not exist');
         } else {
             localData = JSON.parse(localData);
             uid = localData.uid;

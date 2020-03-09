@@ -75,7 +75,7 @@ let groundLand = cc.Class({
     },
 
     handleColliderEvent(event) {
-        console.log('handleColliderEvent!!!', event.detail.index);
+        // console.log('handleColliderEvent!!!', event.detail.index);
         this.progressNode.collectExp();
     },
 
@@ -89,8 +89,6 @@ let groundLand = cc.Class({
     initGroundLand(info) {
         // let data = { index: 0, type: 0, growthStatue: 0, healthStatue: { bug: 0, reap: 0, water: 0, withered: 0 }, isUse: true, isLock: false, waterTime: -1, restTime: -1, plantTime: -1 };
         this.info = info;
-        // this.calculatePlantHealthStatue();
-        console.log(info, '90');
         this.computedAutoWaterReduceTime();
         this.updateServerData();
         this.compareInsectAppearTime();
@@ -157,14 +155,14 @@ let groundLand = cc.Class({
             let plantInterval = (FarmData.plantInfo[this.info.type].waterIntervel * unitTime);
             if (autoProp.autowater.endTime > current) {
                 time = Math.floor((current - this.info.waterTime) / plantInterval);
-                console.log(current, this.info.waterTime, time, plantInterval, '2222222');
+                // console.log(current, this.info.waterTime, time, plantInterval, '2222222');
             } else {
                 let rest = this.getPlantReapRestTime(current, 0);
                 if (autoProp.autowater.endTime < 0 || rest < 0) {
                     return;
                 }
                 time = Math.floor((autoProp.autowater.endTime - this.info.waterTime) / plantInterval);
-                console.log('3333', time);
+                // console.log('3333', time);
             }
             time = time >= 0 ? time : 0;
             if (time == 0) {
@@ -175,7 +173,7 @@ let groundLand = cc.Class({
             // 更新土地的浇水时间
             this.info.waterTime += time * plantInterval;
             // 更新土地信息
-            console.log(time, '11111111111111');
+            // console.log(time, '11111111111111');
             cc.systemEvent.emit('UPDATE_LAND', this.info);
         }
     },
@@ -208,16 +206,17 @@ let groundLand = cc.Class({
 
     // 根据剩余时间来展示植物成长的阶段性
     judgePlantGrowStage(restTime, part) {
-
         // 当剩余时间少于
         if (restTime <= part) {
             this.info.growthStatue = 2;
             this.plantAnimationNode.changePlantTexture(this.info.type, 2, this.info.index);
+
         } else if (restTime <= 2 * part) {
             this.info.growthStatue = 1;
             this.plantAnimationNode.changePlantTexture(this.info.type, 1, this.info.index);
 
         } else if (restTime <= 3 * part) {
+
             this.info.growthStatue = 0;
             this.plantAnimationNode.changePlantTexture(this.info.type, 0, this.info.index);
         }
@@ -252,11 +251,12 @@ let groundLand = cc.Class({
                         this.progressNode.initProgressNode(matureTime, 1, this.info);
                     }, 0.2 * this.info.index
                 )
-                console.log('jinlezheli11111');
+                // console.log('jinlezheli11111');
             } else {
 
-                console.log('jinlezheli2222');
+                // console.log('jinlezheli2222');
                 this.progressNode.initProgressNode(matureTime, 2, this.info);
+                this.progressNode.finishedMoveAnimation();
             }
 
         } else {
@@ -339,15 +339,15 @@ let groundLand = cc.Class({
             this.info.restTime = 0;
             this.info.waterTime = -1;
             this.info.growthStatue = 2;
-            // console.log(this.info.healthStatue);
             this.scheduleOnce(
                 function () {
                     this.showPlantGrowStatue(this.info.healthStatue);
                 }, 2
-            )
+            );
             // this.showPlantGrowStatue(this.info.healthStatue);
             cc.systemEvent.emit('UPDATE_LAND', this.info);
             this.progressNode.finishedMoveAnimation();
+            this.plantAnimationNode.stopAnimaAndResume();
         } else {
             this.restTime--;
             // this.info.restTime=this.restTime;
@@ -371,11 +371,16 @@ let groundLand = cc.Class({
             this.info.healthStatue.bug = 1;
             // 展示虫子动画 todo    
             this.insectAnimation();
-            this.showPlantGrowStatue(this.info.healthStatue);
+            this.scheduleOnce(
+                function () {
+                    this.showPlantGrowStatue(this.info.healthStatue);
+                }, 2
+            )
+
             cc.systemEvent.emit('UPDATE_LAND', this.info);
         } else {
             this.insectTime--;
-            console.log(this.insectTime);
+            // console.log(this.insectTime);
         }
 
     },
@@ -441,10 +446,11 @@ let groundLand = cc.Class({
 
     // 更新当前种植植物的生长状态
     updatePlantGrowStatue(type, num) {
+        // console.log(type, num, 'nmb,haidewohaizhaoa ');
         if (typeof type == 'number' && typeof num == 'number') {
             if (num >= 0) {
                 // this.plant.spriteFrame = this.plantList[type].viewList[num];
-                this.plantAnimationNode.changePlantTexture(type, num, this.info.index);
+                this.plantAnimationNode.changePlantTexture(type, num, this.info.index, this.info.healthStatue.reap);
             } else {
                 return;
             }
@@ -563,7 +569,7 @@ let groundLand = cc.Class({
                     this.info.isLock = 3;
                     cc.systemEvent.emit('UPDATE_LAND', this.info);
                 }
-                console.log('傻狍子，进来了么？')
+                // console.log('傻狍子，进来了么？')
                 break;
 
             default:
@@ -632,6 +638,7 @@ let groundLand = cc.Class({
 
         if (this.info.isLock < 3) {
             // console.log('254');
+            // console.log(this.info.isLock, '636');
             if (this.info.isLock == 2) {
                 let worldPos = this.node.parent.convertToWorldSpaceAR(this.node.position);
                 let obj = {};
@@ -674,7 +681,7 @@ let groundLand = cc.Class({
 
     //土地被选中的展示效果
     landChoosed(str) {
-        console.log('landchoosed!!', str);
+        // console.log('landchoosed!!', str);
 
         let event = new cc.Event.EventCustom('manager_land', true);
         event.detail = { index: this.info.index };
@@ -701,7 +708,7 @@ let groundLand = cc.Class({
 
     //  显示提示牌
     showTipsNode() {
-        console.log('nimabizenmebuxianshi le?');
+        // console.log('nimabizenmebuxianshi le?');
         if (!!this.shieldTime && this.shieldTime > 0) {
             // 显示三个
             this.node_tips.getComponent(cc.Sprite).spriteFrame = this.list_tips_bg[0];
@@ -823,7 +830,7 @@ let groundLand = cc.Class({
                 }
             }
             if (index >= 0) {
-                console.log(index, '698!!');
+                // console.log(index, '698!!');
                 this.updatePlantHealthStatue(index);
             } else {
                 this.growStatue.node.active = false;
@@ -911,12 +918,12 @@ let groundLand = cc.Class({
         this.info.isUse = false;
         this.isLandUsed(false);
         let produce = this.getCurrentLevelReapNumber(this.info.type);
-        console.log(this.info.type, produce, '425');
+        // console.log(this.info.type, produce, '425');
 
         // 如果虫子存在的时间过长，植物将被迫减产50%
         if (this.info.isReduceProduce == 1) {
             produce = Math.floor(produce * 0.5);
-            console.log('ssssssssssssssssss');
+            // console.log('ssssssssssssssssss');
         }
         // 更新仓库数据
         let data = {
@@ -937,13 +944,13 @@ let groundLand = cc.Class({
         this.plantAnimationNode.fadeOut();
 
         //  隐藏进度条
+        cc.director.SoundManager.playSound('farm_reap');
         this.progressNode.resetAccumulateStartTime();
         this.progressNode.resetPlantStartTime(this.info.index);
         this.progressNode.hideProgressNode();
 
-        cc.director.SoundManager.playSound('farm_reap');
         // 隐藏进度条 todo
-        this.progressNode.active = false;
+        // this.progressNode.active = false;
 
 
     },
@@ -1089,7 +1096,7 @@ let groundLand = cc.Class({
             cc.systemEvent.emit('SHOW_WORD_NOTICE', { code: 1008 });
         }
 
-        console.log('施肥');
+        // console.log('施肥');
         cc.director.SoundManager.playSound('farm_fert_1');
 
     },
@@ -1146,7 +1153,7 @@ let groundLand = cc.Class({
     // 除虫
     pestControl() {
         this.hideHealthStatue();
-        console.log('bug');
+        // console.log('bug');
         this.info.healthStatue.bug = 0;
         this.info.insectAppearTime = -1;
         // 喷洒杀虫剂的动画
@@ -1253,6 +1260,7 @@ let groundLand = cc.Class({
         let peroidtime = Math.floor(Math.random(max - min) + min) * unitTime;
         // + currentTime;
         // let peroidtime = 20;
+        // console.log(peroidtime, item, 1258);
         this.info.insectAppearTime = peroidtime > 0 ? peroidtime + currentTime : -1;
         // console.log(peroidtime, this.info.insectAppearTime, '760');
         this.insectTime = peroidtime;
@@ -1261,7 +1269,7 @@ let groundLand = cc.Class({
 
     // 比较当前时间和虫子出现时间
     compareInsectAppearTime() {
-        console.log(this.info, '767');
+        // console.log(this.info, '767');
         let current = FarmUtils.getServerTime();
         let insectAppearTime = this.info.insectAppearTime;
         if (current < insectAppearTime || insectAppearTime == -1) {
@@ -1269,18 +1277,18 @@ let groundLand = cc.Class({
             this.insectTime = insectAppearTime - current;
             if (this.insectTime > 0) {
                 this.startInsectAppearIntervel();
-                console.log('insect is not appear! start insect countdown !');
+                // console.log('insect is not appear! start insect countdown !');
             }
             return;
         } else {
-            console.log('insect is appear');
-            console.log(insectAppearTime, this.info.protectEndTime, '848');
+            // console.log('insect is appear');
+            // console.log(insectAppearTime, this.info.protectEndTime, '848');
             // 判断是否存在保护罩 
             if (insectAppearTime < this.info.protectEndTime) {
 
                 return;
             }
-            console.log('shenmegui ?')
+            // console.log('shenmegui ?')
 
             // 执行虫子动画
             let peroid = FarmData.insectAppearTimeList[this.info.type][3] * unitTime;
@@ -1378,7 +1386,7 @@ let groundLand = cc.Class({
         }
 
 
-        console.log(peroid, FarmData.propShopList[type].effectTime, '878');
+        // console.log(peroid, FarmData.propShopList[type].effectTime, '878');
 
         cc.director.SoundManager.playSound('farm_protect');
 
@@ -1458,7 +1466,7 @@ let groundLand = cc.Class({
         let end = FarmData.waterEndPos;
         let item;
         for (let i = 0; i < start.length; i++) {
-            // this.scheduleOnce(function(){
+
             if (cc.director.nodePool.size() > 0) {
                 item = cc.director.nodePool.get();
             } else {
@@ -1468,7 +1476,7 @@ let groundLand = cc.Class({
             item.parent = this.node_animaArea;
             item.position = start[i];
             item.getComponent('item_fallWater').fallDown(end[i]);
-            // },0.1*i);
+
 
         }
 
@@ -1529,7 +1537,7 @@ let groundLand = cc.Class({
     insecAnimation() {
         let insec = cc.instantiate(this.insecMachine);
         insec.parent = this.node;
-        insec.position = cc.v2(60, 120);
+        insec.position = cc.v2(0, 120);
         let particle = insec.getComponent(cc.ParticleSystem);
         particle.resetSystem();
         let duration = particle.duration;
@@ -1547,17 +1555,28 @@ let groundLand = cc.Class({
             this.plantAnimationNode.hideView();
             return;
         } else {
-            // this.info.type
-            // this.plantAnimationNode.startPlantAnimation();
-            this.plantAnimationNode.changePlantTexture(this.info.type, this.info.growthStatue, this.info.index);
+            // console.log(this.info.type, this.info.growthStatue, this.info.index, this.info.healthStatue, 1552);
+            this.plantAnimationNode.changePlantTexture(this.info.type, this.info.growthStatue, this.info.index, this.info.healthStatue.reap);
         }
     },
 
+    // 隐藏进度条 隐藏植物
+    hideProgressAndPlant() {
+        this.progressNode.node.active = false;
+        this.plantAnimationNode.node.active = false;
+        this.growStatue.node.active = false;
+        this.earth.node.active = false;
+    },
 
-
-
-
-
+    // 显示进度条 显示植物
+    showProgressAndPlant() {
+        if (this.info.isUse) {
+            this.progressNode.node.active = true;
+        }
+        this.plantAnimationNode.node.active = true;
+        this.showPlantGrowStatue(this.info.healthStatue);
+        this.earth.node.active = true;
+    },
 
     // update (dt) {},
 });

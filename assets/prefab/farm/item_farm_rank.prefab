@@ -467,9 +467,9 @@
     "_useOriginalSize": false,
     "_string": "Grandpa",
     "_N$string": "Grandpa",
-    "_fontSize": 30,
-    "_lineHeight": 40,
-    "_enableWrapText": true,
+    "_fontSize": 40,
+    "_lineHeight": 50,
+    "_enableWrapText": false,
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
@@ -537,8 +537,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 214.6,
-      "y": 7.7,
+      "x": 200,
+      "y": 15,
       "z": 0
     },
     "_scale": {
@@ -873,8 +873,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 170.3,
-      "y": -26.5,
+      "x": 180,
+      "y": -25,
       "z": 0
     },
     "_scale": {

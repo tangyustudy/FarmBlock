@@ -18,7 +18,7 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
     onLoad() {
-       
+
     },
 
 
@@ -49,6 +49,7 @@ cc.Class({
             this.label_number.node.active = true;
         } else {
             this.node_buy.active = true;
+            this.label_number.node.active = false;
             this.updateBuyPrice(this.data.price);
         }
 
@@ -82,7 +83,7 @@ cc.Class({
     // 解锁等级
     updateUnlockedLevel(num) {
         if (typeof num == 'number') {
-            this.label_locked_level.string = ''+ num;
+            this.label_locked_level.string = '' + num;
         } else {
             cc.log('error:num is not a number,60');
         }
@@ -122,7 +123,7 @@ cc.Class({
     },
 
 
-    
+
     // 显示种植操作
     showPlantOperate() {
         if (!!this.data.isUnlock && this.data.number > 0) {

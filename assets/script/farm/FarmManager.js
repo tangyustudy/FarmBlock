@@ -176,7 +176,7 @@ cc.Class({
         } else {
             currentLevel = 1;
         }
-        console.log(list, currentLevel, '179');
+        // console.log(list, currentLevel, '179');
         let index = -1;
         for (let i = 0; i < list.length - 1; i++) {
             if (list[i] > currentLevel && list[i + 1] <= currentLevel) {
@@ -192,13 +192,13 @@ cc.Class({
     // 判断升级后是否存在土地进入可解锁阶段
     isLandUnlockBylevelUp() {
         let nextIndex = this.getNextUnlockLand();
-        console.log(nextIndex, '191');
+        // console.log(nextIndex, '191');
         let nextIndexLand = this.landContainer.children[nextIndex];
         let canUnlockLand = this.landContainer.children[nextIndex + 1];
-        console.log(nextIndexLand, canUnlockLand);
+        // console.log(nextIndexLand, canUnlockLand);
         let s1 = nextIndexLand.getComponent('groundLand');
         let s2 = canUnlockLand.getComponent('groundLand');
-        console.log(s1, s2);
+        // console.log(s1, s2);
         if (s1.info.isLock == 0) {
             return;
         } else {
@@ -465,7 +465,7 @@ cc.Class({
     // 更新道具信息
     updatePropsData(event) {
         let data = event.data;
-        console.log(data);
+        // console.log(data);
         let propsData = FarmUtils.getLocalData('propsData');
         if (!propsData) {
             propsData = FarmData.propsData;
@@ -636,7 +636,9 @@ cc.Class({
     hideAllPlantStatue() {
         let children = this.landContainer.children;
         for (let i = 0; i < children.length; i++) {
-            children[i].getComponent('groundLand').changePlantStatue(1);
+            if (children[i].name == 'ground') {
+                children[i].getComponent('groundLand').changePlantStatue(1);
+            }
         }
     },
 
@@ -710,6 +712,38 @@ cc.Class({
             for (let i = 0; i < children.length; i++) {
                 if (children[i].name == 'ground') {
                     children[i].getComponent('groundLand').managerLand(2);
+                }
+            }
+        }
+    },
+
+    // 隐藏已经解锁土地上的植物 
+    hideLandUnlockPlant() {
+        let landData = FarmUtils.getLocalData('landData');
+        if (!!landData) {
+            let children = this.landContainer.children;
+            for (let i = 0; i < children.length; i++) {
+                if (children[i].name != 'ground') {
+                    continue;
+                }
+                if (landData[i].isLock == 3) {
+                    children[i].getComponent('groundLand').hideProgressAndPlant();
+                }
+            }
+        }
+    },
+
+    // 显示已解锁土地的植物
+    showLandUnlockPlant() {
+        let landData = FarmUtils.getLocalData('landData');
+        if (!!landData) {
+            let children = this.landContainer.children;
+            for (let i = 0; i < children.length; i++) {
+                if (children[i].name != 'ground') {
+                    continue;
+                }
+                if (landData[i].isLock == 3) {
+                    children[i].getComponent('groundLand').showProgressAndPlant();
                 }
             }
         }

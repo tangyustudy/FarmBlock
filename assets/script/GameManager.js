@@ -49,7 +49,7 @@ cc.Class({
      updateData(){
         let data = GameData.getGameData();
         Utils.updateGameInfo(data);
-        console.log('update game data!');
+        // console.log('update game data!');
     },
 
       // 显示loading动画

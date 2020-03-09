@@ -160,7 +160,7 @@ cc.Class({
         let localData = cc.sys.localStorage.getItem('localData');
         if (!localData) {
             uid = window.NativeManager.getUid();
-            console.log('localData is not exist');
+            // console.log('localData is not exist');
         } else {
             localData = JSON.parse(localData);
             if (localData.uid == '') {
@@ -170,7 +170,7 @@ cc.Class({
             }
         }
         let callback = function (res) {
-            console.log(res);
+            // console.log(res);
             self.worldList = res.world;
             self.teamList = res.team;
         };
