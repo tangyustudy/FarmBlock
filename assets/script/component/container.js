@@ -490,7 +490,11 @@ cc.Class({
             if (!Utils.indexOfV2(this.tempPos, pos)) {
                 this.tempPos.push(pos);
             } else {
+<<<<<<< HEAD
                 // console.log(pos, this.tempPos, '354');
+=======
+                console.log(pos, this.tempPos, '354');
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
                 return;
             }
         }
@@ -1323,7 +1327,11 @@ cc.Class({
                 level: 3
             })
             cc.systemEvent.emit('GAMEMASK_CONTROL', { order: 2 });
+<<<<<<< HEAD
             // console.log('helloworld');
+=======
+            console.log('helloworld');
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         }
     },
 

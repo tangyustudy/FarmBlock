@@ -32,18 +32,30 @@ cc.Class({
                 Utils.showPromptWithScale(this.node);
                 this.initChangeBox();
             } else {
+<<<<<<< HEAD
                 // console.log('fuck');
             }
         } else {
             cc.director.screenDialog.mask.active = false;
             // console.log('zou le zheli?')
+=======
+                console.log('fuck');
+            }
+        } else {
+            cc.director.screenDialog.mask.active = false;
+            console.log('zou le zheli?')
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
             return;
         }
         // 可以改名
     },
 
     initChangeBox() {
+<<<<<<< HEAD
         // console.log(this.editBox);
+=======
+        console.log(this.editBox);
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         this.editBox.string = '';
         this.editBox.placeholder = 'Enter your name...';
         this.clickTime = 0;
@@ -79,6 +91,7 @@ cc.Class({
                     // LOAD_TIPS_HIDE
                     cc.systemEvent.emit('LOAD_TIPS_HIDE');
                     if (res.code === 0) {
+<<<<<<< HEAD
                         // console.log('change name successed');
                         cc.systemEvent.emit('TIPS_PROMPT_SHOW', { type: 2 });
                         self.hideView();
@@ -88,6 +101,17 @@ cc.Class({
                         self.initChangeBox();
                     } else {
                         // console.log(res.code, 'error:', res.msg);
+=======
+                        console.log('change name successed');
+                        cc.systemEvent.emit('TIPS_PROMPT_SHOW', { type: 2 });
+                        self.hideView();
+                    } else if (res.code == 1005) {
+                        console.log('the name is exists');
+                        self.moveTipsAnima(0);
+                        self.initChangeBox();
+                    } else {
+                        console.log(res.code, 'error:', res.msg);
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
                     }
                 };
                 let localData = cc.sys.localStorage.getItem('localData');
@@ -106,7 +130,11 @@ cc.Class({
 
             } else {
                 // 提示两次的输入不一样
+<<<<<<< HEAD
                 // console.log('两次的输入不一样');
+=======
+                console.log('两次的输入不一样');
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
                 this.moveTipsAnima(1);
                 this.initChangeBox();
             }

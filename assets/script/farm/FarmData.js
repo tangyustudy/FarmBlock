@@ -336,8 +336,11 @@ const wordTips = {
     '1007': 'exchange success!',
     '1008': 'The props is not enough!',
     '1009': 'The seed is not enough!',
+<<<<<<< HEAD
     '1010': 'The seed is use up!',
     '1011': 'The  props is use up!',
+=======
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
 }
 
 const seedLabel = [
@@ -354,6 +357,7 @@ const seedLabel = [
 
 const expThreshold = 1000;
 
+<<<<<<< HEAD
 const landLevelUpInfo = [
     { landLevel: 0, baseCost: 0, levelUpCount: 0 },
     { landLevel: 0, baseCost: 0, levelUpCount: 0 },
@@ -367,6 +371,8 @@ const landLevelUpInfo = [
 ]
 
 
+=======
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
 
 module.exports = {
     landPositionList,

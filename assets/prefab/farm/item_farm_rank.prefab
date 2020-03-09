@@ -467,9 +467,15 @@
     "_useOriginalSize": false,
     "_string": "Grandpa",
     "_N$string": "Grandpa",
+<<<<<<< HEAD
     "_fontSize": 40,
     "_lineHeight": 50,
     "_enableWrapText": false,
+=======
+    "_fontSize": 30,
+    "_lineHeight": 40,
+    "_enableWrapText": true,
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
@@ -537,8 +543,13 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
+<<<<<<< HEAD
       "x": 200,
       "y": 15,
+=======
+      "x": 214.6,
+      "y": 7.7,
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
       "z": 0
     },
     "_scale": {
@@ -873,8 +884,13 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
+<<<<<<< HEAD
       "x": 180,
       "y": -25,
+=======
+      "x": 170.3,
+      "y": -26.5,
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
       "z": 0
     },
     "_scale": {

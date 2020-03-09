@@ -659,7 +659,11 @@ cc.Class({
 
 
     test() {
+<<<<<<< HEAD
         // console.log('1111111fuck');
+=======
+        console.log('1111111fuck');
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
     },
 
     start() {

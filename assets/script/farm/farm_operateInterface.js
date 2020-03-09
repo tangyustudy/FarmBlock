@@ -27,6 +27,7 @@ cc.Class({
     },
 
     updatePlantNumber(event) {
+<<<<<<< HEAD
         // console.log(event, '30');
         this.updateLabelString(event.number, this.label_plant_number);
         if (event.number == 0) {
@@ -40,6 +41,10 @@ cc.Class({
                 }, 1.5
             );
 
+=======
+        this.updateLabelString(event.number, this.label_plant_number);
+        if (event.number == 0) {
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
             this.scheduleOnce(function () {
                 this.showPromptByMode();
             }, delayTime);

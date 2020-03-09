@@ -76,7 +76,11 @@ cc.Class({
                     }
 
                 }else if(name=='farm'){
+<<<<<<< HEAD
                     // console.log('farm scene!');
+=======
+                    console.log('farm scene!');
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
                 }
 
             }
@@ -92,7 +96,11 @@ cc.Class({
             }else  if (name == 'gameView') {
                 cc.systemEvent.emit('GAMEVIEW_TIPS', { wordIndex: 0 });
             }else   if(name=='farm'){
+<<<<<<< HEAD
                 // console.log('farm scene11111!');
+=======
+                console.log('farm scene11111!');
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
             }
 
 

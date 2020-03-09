@@ -72,7 +72,11 @@ cc.Class({
 
     updateUserName(name){
         if(typeof name =='string'){
+<<<<<<< HEAD
             // console.log(name)
+=======
+            console.log(name)
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
             this.userName.string = decodeURIComponent(name);
             // this.userName.string =name;
         }else{

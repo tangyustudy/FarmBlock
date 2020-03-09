@@ -18,7 +18,11 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
     onLoad() {
+<<<<<<< HEAD
 
+=======
+       
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
     },
 
 
@@ -49,7 +53,10 @@ cc.Class({
             this.label_number.node.active = true;
         } else {
             this.node_buy.active = true;
+<<<<<<< HEAD
             this.label_number.node.active = false;
+=======
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
             this.updateBuyPrice(this.data.price);
         }
 
@@ -83,7 +90,11 @@ cc.Class({
     // 解锁等级
     updateUnlockedLevel(num) {
         if (typeof num == 'number') {
+<<<<<<< HEAD
             this.label_locked_level.string = '' + num;
+=======
+            this.label_locked_level.string = ''+ num;
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         } else {
             cc.log('error:num is not a number,60');
         }
@@ -123,7 +134,11 @@ cc.Class({
     },
 
 
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
     // 显示种植操作
     showPlantOperate() {
         if (!!this.data.isUnlock && this.data.number > 0) {

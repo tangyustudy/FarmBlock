@@ -29,8 +29,11 @@ cc.Class({
         list_btnCoins: [cc.SpriteFrame],
         node_coinsNumber: cc.Node,
         node_diamondNumber: cc.Node,
+<<<<<<< HEAD
         node_btn_add: cc.Node,
         node_btn_reduce: cc.Node,
+=======
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -60,6 +63,7 @@ cc.Class({
         node.runAction(action);
     },
 
+<<<<<<< HEAD
     // 按钮的点击效果
     btnClickEffect(node, callback) {
         let action = cc.sequence(
@@ -74,6 +78,8 @@ cc.Class({
         node.runAction(action);
     },
 
+=======
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
 
     hideView() {
         this.node.active = false;
@@ -86,7 +92,11 @@ cc.Class({
         this.changeSpriteView(this.node_icon, this.list_cost, 1)
         this.changeSpriteView(this.node_btnDiamond, this.list_btnDiamond, 0);
         this.changeSpriteView(this.node_btnCoins, this.list_btnCoins, 1);
+<<<<<<< HEAD
         this.unitConvert(0, this.changeMode);
+=======
+        this.unitConvert(100, this.changeMode);
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
 
     },
 
@@ -96,7 +106,11 @@ cc.Class({
         this.changeSpriteView(this.node_icon, this.list_cost, 0);
         this.changeSpriteView(this.node_btnDiamond, this.list_btnDiamond, 1);
         this.changeSpriteView(this.node_btnCoins, this.list_btnCoins, 0);
+<<<<<<< HEAD
         this.unitConvert(0, this.changeMode);
+=======
+        this.unitConvert(10000, this.changeMode);
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
     },
 
     // 更新节点纹理
@@ -124,7 +138,10 @@ cc.Class({
     },
 
     addExchangeNumber() {
+<<<<<<< HEAD
         this.btnClickEffect(this.node_btn_add);
+=======
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         if (this.changeMode == 1) {
             this.exchangeNumber += 100;
         } else if (this.changeMode == 2) {
@@ -133,6 +150,7 @@ cc.Class({
         this.unitConvert(this.exchangeNumber, this.changeMode);
     },
 
+<<<<<<< HEAD
     addNumber(touchCounter) {
         if (this.changeMode == 1) {
             if (this.exchangeNumber < Math.floor(this.coinsNumberMax / 500)) {
@@ -207,6 +225,10 @@ cc.Class({
 
     reduceExchangeNumber() {
         this.btnClickEffect(this.node_btn_reduce);
+=======
+    reduceExchangeNumber() {
+
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         if (this.changeMode == 1) {
             if (this.exchangeNumber <= 100) {
                 return;
@@ -233,28 +255,42 @@ cc.Class({
                 farmInfo.coin -= this.oringeNumber;
                 FarmUtils.setLocalData(farmInfo, 'localFarmInfo');
                 // 更新金币和钻石的展示
+<<<<<<< HEAD
                 // this.updateCoinsAndDiamondDisplay();
                 cc.systemEvent.emit('UPDATE_FARM_COINS', { number: -this.oringeNumber });
                 cc.systemEvent.emit('SHOW_WORD_NOTICE', { code: 1007 });
                 FarmUtils.numberRoll(this.node_coinsNumber, -this.oringeNumber, this.updateCoinsAndDiamondDisplay.bind(this));
                 FarmUtils.numberRoll(this.node_diamondNumber, this.exchangeNumber, this.updateCoinsAndDiamondDisplay.bind(this));
+=======
+                this.updateCoinsAndDiamondDisplay();
+                cc.systemEvent.emit('SHOW_WORD_NOTICE', { code: 1007 });
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
             } else {
                 // 提示金币不够
                 cc.systemEvent.emit('SHOW_WORD_NOTICE', { code: 1006 });
             }
 
         } else {
+<<<<<<< HEAD
             if (diamond >= this.oringeNumber) {
+=======
+            if (diamond > this.oringeNumber) {
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
                 farmInfo.coin += this.exchangeNumber;
                 diamond -= this.oringeNumber;
                 FarmUtils.saveCoins(diamond);
                 FarmUtils.setLocalData(farmInfo, 'localFarmInfo');
                 // 更新金币和钻石的展示
+<<<<<<< HEAD
                 // this.updateCoinsAndDiamondDisplay();
                 cc.systemEvent.emit('UPDATE_FARM_COINS', { number: this.exchangeNumber });
                 cc.systemEvent.emit('SHOW_WORD_NOTICE', { code: 1007 });
                 FarmUtils.numberRoll(this.node_coinsNumber, this.exchangeNumber, this.updateCoinsAndDiamondDisplay.bind(this));
                 FarmUtils.numberRoll(this.node_diamondNumber, -this.oringeNumber, this.updateCoinsAndDiamondDisplay.bind(this));
+=======
+                this.updateCoinsAndDiamondDisplay();
+                cc.systemEvent.emit('SHOW_WORD_NOTICE', { code: 1007 });
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
             } else {
                 // 提示钻石不够
                 cc.systemEvent.emit('SHOW_WORD_NOTICE', { code: 1005 });
@@ -271,8 +307,13 @@ cc.Class({
         let coin = FarmUtils.getObjectProperty('localFarmInfo', 'coin');
         this.changeLabelContent(this.node_diamondNumber, diamond);
         this.changeLabelContent(this.node_coinsNumber, coin);
+<<<<<<< HEAD
         this.diamondNumberMax = diamond;
         this.coinsNumberMax = coin;
+=======
+        cc.systemEvent.emit('UPDATE_FARM_COINS');
+
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
     },
 
 

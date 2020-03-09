@@ -10,7 +10,10 @@ cc.Class({
         item_plant_seed: cc.Prefab,
         node_touchNode1: cc.Node,
         node_touchNode2: cc.Node,
+<<<<<<< HEAD
         scrollView: cc.ScrollView,
+=======
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -70,7 +73,10 @@ cc.Class({
     },
 
     showView() {
+<<<<<<< HEAD
         this.scrollView.scrollToTop(0.1);
+=======
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         this.initPlantContainer();
         this.node.active = true;
         this.nodeFadeIn();
@@ -142,7 +148,11 @@ cc.Class({
     },
 
     // 显示农场引导
+<<<<<<< HEAD
     showFarmGuide() {
+=======
+    showFarmGuide(){
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         cc.systemEvent.emit('SHOW_FARM_GUIDE');
     },
 

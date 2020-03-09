@@ -103,13 +103,19 @@ cc.Class({
 
     showView(obj) {
         this.obj = obj;
+<<<<<<< HEAD
         // console.log(obj, 8 - obj.index);
+=======
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         this.node.active = true;
         FarmUtils.showPromptWithScale(this.node);
         this.startCircleLight();
         this.landScaleAnima();
         this.landUnlockEffect();
+<<<<<<< HEAD
         this.price.spriteFrame = this.landUnlockCost[8 - obj.index];
+=======
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
     },
 
     // 隐藏容器内所有光圈节点,停止动作
@@ -131,10 +137,15 @@ cc.Class({
         this.stopLandAnimation();
         this.endLandUnlockEffect();
         this.node.active = false;
+<<<<<<< HEAD
         let cost = FarmData.landUnlockAndLevelUpCost[this.obj.index].cost;
         if (!!this.obj) {
             cc.systemEvent.emit('ANIMA_LAND_UNLOCK', this.obj);
             cc.systemEvent.emit('ADD_COINS', -cost);
+=======
+        if (!!this.obj) {
+            cc.systemEvent.emit('ANIMA_LAND_UNLOCK', this.obj);
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         }
     },
 

@@ -19,7 +19,11 @@ cc.Class({
 
 
     initItem(data) {
+<<<<<<< HEAD
         // console.log(data);
+=======
+        console.log(data);
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         this.data = data;
         this.updateView(data.type);
         // this.updateEffectTime(data.type);

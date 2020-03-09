@@ -176,7 +176,11 @@ cc.Class({
         } else {
             currentLevel = 1;
         }
+<<<<<<< HEAD
         // console.log(list, currentLevel, '179');
+=======
+        console.log(list, currentLevel, '179');
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         let index = -1;
         for (let i = 0; i < list.length - 1; i++) {
             if (list[i] > currentLevel && list[i + 1] <= currentLevel) {
@@ -192,6 +196,7 @@ cc.Class({
     // 判断升级后是否存在土地进入可解锁阶段
     isLandUnlockBylevelUp() {
         let nextIndex = this.getNextUnlockLand();
+<<<<<<< HEAD
         // console.log(nextIndex, '191');
         let nextIndexLand = this.landContainer.children[nextIndex];
         let canUnlockLand = this.landContainer.children[nextIndex + 1];
@@ -199,6 +204,15 @@ cc.Class({
         let s1 = nextIndexLand.getComponent('groundLand');
         let s2 = canUnlockLand.getComponent('groundLand');
         // console.log(s1, s2);
+=======
+        console.log(nextIndex, '191');
+        let nextIndexLand = this.landContainer.children[nextIndex];
+        let canUnlockLand = this.landContainer.children[nextIndex + 1];
+        console.log(nextIndexLand, canUnlockLand);
+        let s1 = nextIndexLand.getComponent('groundLand');
+        let s2 = canUnlockLand.getComponent('groundLand');
+        console.log(s1, s2);
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         if (s1.info.isLock == 0) {
             return;
         } else {
@@ -328,7 +342,11 @@ cc.Class({
 
         // console.log(islevelUp, '263');
         FarmUtils.setLocalData(farmInfo, 'localFarmInfo');
+<<<<<<< HEAD
         cc.systemEvent.emit('START_TO_END', { worldPos: worldPos, num: num, exp: exp, islevelUp: islevelUp, coins: coins });
+=======
+        cc.systemEvent.emit('START_TO_END', { worldPos: worldPos, num: num, exp: exp, islevelUp: islevelUp });
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         // console.log(worldPos, '197');
     },
 
@@ -442,8 +460,12 @@ cc.Class({
             // 表示种子数量增加
             if (data.mode == 1) {
                 item.number += data.number;
+<<<<<<< HEAD
                 let coins = FarmData.shopSeedData[index].price;
                 cc.systemEvent.emit('UPDATE_FARM_COINS', { coins: -coins });
+=======
+                cc.systemEvent.emit('UPDATE_FARM_COINS');
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
                 // cc.systemEvent.emit('UPDATE_OPERATE_NUMBER', { number: item.number });
             } else if (data.mode == 2) {//种子减少
                 item.number -= data.number;
@@ -465,7 +487,11 @@ cc.Class({
     // 更新道具信息
     updatePropsData(event) {
         let data = event.data;
+<<<<<<< HEAD
         // console.log(data);
+=======
+        console.log(data);
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         let propsData = FarmUtils.getLocalData('propsData');
         if (!propsData) {
             propsData = FarmData.propsData;
@@ -636,9 +662,13 @@ cc.Class({
     hideAllPlantStatue() {
         let children = this.landContainer.children;
         for (let i = 0; i < children.length; i++) {
+<<<<<<< HEAD
             if (children[i].name == 'ground') {
                 children[i].getComponent('groundLand').changePlantStatue(1);
             }
+=======
+            children[i].getComponent('groundLand').changePlantStatue(1);
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         }
     },
 
@@ -717,6 +747,7 @@ cc.Class({
         }
     },
 
+<<<<<<< HEAD
     // 隐藏已经解锁土地上的植物 
     hideLandUnlockPlant() {
         let landData = FarmUtils.getLocalData('landData');
@@ -749,6 +780,8 @@ cc.Class({
         }
     },
 
+=======
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
 
     // // 农场经验增加的动画   
     // farmExpAddAnimation(event) {

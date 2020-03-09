@@ -339,15 +339,22 @@ function numberRoll(node, addNumber, callback) {
     }
     let label = node.getComponent(cc.Label);
     let number = parseInt(label.string);
+<<<<<<< HEAD
     console.log('utils', number, addNumber);
     let quotient = Math.floor(addNumber / 20);
     let oneOfAll, len, rest = 0, isAddRest = false;
     if (Math.abs(quotient) > 1) {
+=======
+    let quotient = Math.floor(addNumber / 20);
+    let oneOfAll, len, rest = 0, isAddRest = false;
+    if (quotient > 1) {
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         oneOfAll = quotient;
         len = 20;
         rest = addNumber - 20 * oneOfAll;
         isAddRest = true;
     } else {
+<<<<<<< HEAD
         if (addNumber > 0) {
             oneOfAll = 1;
         } else {
@@ -361,6 +368,15 @@ function numberRoll(node, addNumber, callback) {
         setTimeout(
             function () {
                 console.log('cnmb');
+=======
+        oneOfAll = 1;
+        len = addNumber;
+    }
+
+    for (let i = 0; i < len; i++) {
+        this.scheduleOnce(
+            function () {
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
                 number += oneOfAll;
                 if (i == len - 1 && rest > 0 && isAddRest) {
                     number += rest;
@@ -369,7 +385,11 @@ function numberRoll(node, addNumber, callback) {
                 if (i == len - 1 && !!callback) {
                     callback();
                 }
+<<<<<<< HEAD
             }, 50 * i
+=======
+            }, 0.05 * i
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         )
     }
 

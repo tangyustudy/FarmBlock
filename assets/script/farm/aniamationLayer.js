@@ -68,7 +68,10 @@ cc.Class({
         let startPos = event.worldPos;
         let number = event.num;
         let exp = event.exp;
+<<<<<<< HEAD
         let coins = event.coins;
+=======
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         let end = cc.find(this.positionList['targetUrl1']);
         let endWp = end.parent.convertToWorldSpaceAR(end.position);
         let nodeStart = this.node.convertToNodeSpaceAR(startPos);
@@ -83,7 +86,11 @@ cc.Class({
             cc.moveTo(t, nodeEnd).easing(cc.easeIn(2.0)),
             cc.callFunc(function () {
                 self.expPool.put(item);
+<<<<<<< HEAD
                 cc.systemEvent.emit('UPDATE_FARM_PROGRESS', { num: number, islevelUp: event.islevelUp, coins: coins });
+=======
+                cc.systemEvent.emit('UPDATE_FARM_PROGRESS', { num: number, islevelUp: event.islevelUp });
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
                 cc.director.SoundManager.playSound('farm_reap_exp');
             })
         );

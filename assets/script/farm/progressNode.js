@@ -62,7 +62,11 @@ cc.Class({
         let tempExp = this.computedSpeedUpTimeExp(isMature, time);
         this.accumulateExpNumber += tempExp;
         this.changeAccumulateExpNumberDisplay(this.accumulateExpNumber);
+<<<<<<< HEAD
         // console.log(tempExp, '加速增加的经验');
+=======
+        console.log(tempExp, '加速增加的经验');
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
     },
 
 
@@ -78,7 +82,11 @@ cc.Class({
     initProgressNode(time, type, info) {
         // 未成熟进度条
         this.info = info;
+<<<<<<< HEAD
         // console.log(info, 'progressNode ,37');
+=======
+        console.log(info, 'progressNode ,37');
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         this.recordPlantStartTime(this.info.index, this.info.plantTime);
         this.computedProgressMoveSpeed(time);
         if (type == 1) {
@@ -145,7 +153,11 @@ cc.Class({
             let exp;
             let period = FarmData.plantInfo[this.info.type].cycle * unitTime;
             if (lastTime == -1) {
+<<<<<<< HEAD
                 // console.log('不存在上次累积时间的');
+=======
+                console.log('不存在上次累积时间的');
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
                 // exp = period / secondExp;
                 return 0;
             } else {
@@ -159,7 +171,11 @@ cc.Class({
                         exp = Math.floor((serverTime - lastTime + propsAddTime) / secondExp);
                     }
                 }
+<<<<<<< HEAD
                 // console.log(plantTime, period, lastTime, exp, '存在上次累积时间');
+=======
+                console.log(plantTime, period, lastTime, exp, '存在上次累积时间');
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
                 return exp;
             }
         } else {
@@ -178,11 +194,16 @@ cc.Class({
     //  0%-100%缓动动画
     growUpMoveAnimation() {
         this.node.active = true;
+<<<<<<< HEAD
         this.node.opacity = 0;
         this.node.runAction(
             cc.fadeIn(2.5)
         );
         this.progressUnlimitedMove(this.unfinishedSpriteList);
+=======
+        this.progressUnlimitedMove(this.unfinishedSpriteList);
+
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         // 执行mask的缓动动画 todo
         this.mask.width = 0;
         this.schedule(this.changeMaskWidth, 0.2);
@@ -197,7 +218,10 @@ cc.Class({
             this.recordAccumulateStartTime();
             this.accumulateExpNumber += 1;
             this.changeAccumulateExpNumberDisplay(this.accumulateExpNumber);
+<<<<<<< HEAD
             this.nodeBreathAnimation(this.expIcon);
+=======
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         }
     },
 
@@ -248,7 +272,11 @@ cc.Class({
     // 收集经验
     collectExp() {
         if (this.accumulateExpNumber > 0) {
+<<<<<<< HEAD
             // console.log(this.accumulateExpNumber);
+=======
+            console.log(this.accumulateExpNumber);
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
             cc.systemEvent.emit('UPDATE_FARM', { exp: this.accumulateExpNumber, coins: 0, worldPos: this.iconWorldPos });
             this.resetAccumulateStartTime();
             this.changeAccumulateExpNumberDisplay(this.accumulateExpNumber);
@@ -301,6 +329,7 @@ cc.Class({
         }
     },
 
+<<<<<<< HEAD
     // 节点的呼吸运动
     nodeBreathAnimation(node) {
         node.active = true;
@@ -314,6 +343,8 @@ cc.Class({
     },
 
 
+=======
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
 
     start() {
         this.iconWorldPos = this.node.convertToWorldSpaceAR(this.expIcon.position);

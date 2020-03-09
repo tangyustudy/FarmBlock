@@ -22,8 +22,13 @@ cc.Class({
 
     updateProgressBar(event) {
         this.progressBar.progress = event.num;
+<<<<<<< HEAD
 
         // console.log(event.num, 'progerssBar 25');
+=======
+     
+        console.log(event.num, 'progerssBar 25');
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         this.icon.runAction(
             cc.sequence(
                 cc.scaleTo(0.2, 1.1),
@@ -36,9 +41,14 @@ cc.Class({
         }
         // else {
         this.updateLevel();
+<<<<<<< HEAD
         cc.systemEvent.emit('UPDATE_FARM_COINS', { number: event.coins });
         // if(event.coins)
         // this.updateCoins();
+=======
+        // if(event.coins)
+        this.updateCoins();
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         // }
 
     },
@@ -58,12 +68,16 @@ cc.Class({
     updateCoins(event) {
         let self = this;
         // let callback = function () {
+<<<<<<< HEAD
         // console.log('event', event);
+=======
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         if (event.number == 0) {
             let coins = FarmUtils.getObjectProperty('localFarmInfo', 'coin');
             if (!coins) {
                 coins = 0;
             }
+<<<<<<< HEAD
             this.label_coins.string = new String(coins);
         } else {
             FarmUtils.numberRoll(this.label_coins, event.number, function () {
@@ -73,6 +87,11 @@ cc.Class({
                 }
                 this.label_coins.string = new String(coins);
             }.bind(this));
+=======
+            self.label_coins.string = new String(coins);
+        } else {
+            FarmUtils.numberRoll(this.label_coins, event.number);
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         }
 
         // };
@@ -98,7 +117,11 @@ cc.Class({
 
     init() {
         this.updateLevel();
+<<<<<<< HEAD
         cc.systemEvent.emit('UPDATE_FARM_COINS', { number: 0 });
+=======
+        this.updateCoins();
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         this.updateCurrentProgress();
     },
 

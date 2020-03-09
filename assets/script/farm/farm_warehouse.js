@@ -27,9 +27,12 @@ cc.Class({
         node_btn_sellAll: cc.Node,
 
         node_farmer: cc.Node,
+<<<<<<< HEAD
 
         node_btn_add: cc.Node,
         node_btn_reduce: cc.Node,
+=======
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -118,8 +121,13 @@ cc.Class({
 
     // 显示
     showItemPrompt(data) {
+<<<<<<< HEAD
         this.itemNumberMax = data.number;
         this.itemCount = 1;
+=======
+
+        this.itemCount = data.number;
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         this.mask.active = true;
         this.node_prompt.active = true;
         FarmUtils.showPromptWithScale(this.node_prompt);
@@ -134,6 +142,7 @@ cc.Class({
 
     },
 
+<<<<<<< HEAD
     test(event) {
         console.log(event, '1111111111111');
     },
@@ -185,6 +194,8 @@ cc.Class({
     },
 
 
+=======
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
 
     // 初始化仓库
     initWarehouseContainer() {

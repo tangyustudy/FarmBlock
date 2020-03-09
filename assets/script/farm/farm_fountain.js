@@ -8,7 +8,10 @@ cc.Class({
         prefab_fountain_small: cc.Prefab,
         node_fountain_big: cc.Node,
         label_fountain_countdown: cc.Label,
+<<<<<<< HEAD
         time_bg: cc.Node,
+=======
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -116,7 +119,11 @@ cc.Class({
             }
         }
         console.log(autoProp);
+<<<<<<< HEAD
         // FarmUtils.setLocalData(autoProp, 'autoProp');
+=======
+        FarmUtils.setLocalData(autoProp, 'autoProp');
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         this.isAutoWater();
     },
 
@@ -127,23 +134,35 @@ cc.Class({
         if (!!autoProp) {
             if (autoProp.autowater.endTime > current) {
                 this.label_fountain_countdown.node.active = true;
+<<<<<<< HEAD
                 this.time_bg.active = true;
                 this.time_bg
                 cc.systemEvent.emit('STARTOVER_AUTOWATER', { type: autoProp.autowater.grade, mode: 2 });
                 this.endTime = autoProp.autowater.endTime;
                 // console.log(this.endTime, '122');
+=======
+                cc.systemEvent.emit('STARTOVER_AUTOWATER', { type: autoProp.autowater.grade, mode: 2 });
+                this.endTime = autoProp.autowater.endTime;
+                console.log(this.endTime, '122');
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
                 this.label_fountain_countdown.string = FarmUtils.countdown(this.endTime, 1);
                 this.schedule(this.showFountainCountdown, 1);
                 cc.director.isAutoWater = true;
             } else {
                 this.label_fountain_countdown.node.active = false;
+<<<<<<< HEAD
                 this.time_bg.active = false;
+=======
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
             }
             // 自动杀虫 todo
 
         } else {
             this.label_fountain_countdown.node.active = false;
+<<<<<<< HEAD
             this.time_bg.active = false;
+=======
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         }
     },
 

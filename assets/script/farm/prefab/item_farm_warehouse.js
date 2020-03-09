@@ -13,7 +13,11 @@ cc.Class({
 
     properties: {
         view: cc.Node,
+<<<<<<< HEAD
         list_view: [cc.SpriteFrame],
+=======
+        list_view:[cc.SpriteFrame],
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         label_number: cc.Label,
     },
 
@@ -34,20 +38,30 @@ cc.Class({
     updateNumber(num) {
         if (typeof num == 'number') {
             this.label_number.string = '' + num;
+<<<<<<< HEAD
         } else {
+=======
+        }else{
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
             cc.log('The params is not number!');
         }
     },
 
     // 更新纹理
+<<<<<<< HEAD
     updateView(type) {
         if (typeof type == 'number') {
+=======
+    updateView(type){
+        if(typeof type=='number'){
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
             this.view.getComponent(cc.Sprite).spriteFrame = this.list_view[type];
         }
     },
 
     onTouchEnd() {
         let event = new cc.Event.EventCustom('click_item', true);
+<<<<<<< HEAD
         event.detail = {
             index: this.data.index,
             number: this.data.number,
@@ -60,10 +74,19 @@ cc.Class({
             }, 0.2
         )
 
+=======
+        event.detail  = {
+            index:this.data.index,
+            number:this.data.number,
+            type:this.data.type,
+        }
+        this.node.dispatchEvent(event);
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         cc.director.currentPlantIndex = this.data.type;
     },
 
 
+<<<<<<< HEAD
     btnClickEffect(node, callback) {
         let action = cc.sequence(
             cc.scaleTo(0.1, 0.85),
@@ -76,10 +99,16 @@ cc.Class({
         );
         node.runAction(action);
     },
+=======
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
 
 
 
 
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
 
 
 

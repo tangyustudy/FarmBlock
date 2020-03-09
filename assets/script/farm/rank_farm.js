@@ -160,7 +160,11 @@ cc.Class({
         let localData = cc.sys.localStorage.getItem('localData');
         if (!localData) {
             uid = window.NativeManager.getUid();
+<<<<<<< HEAD
             // console.log('localData is not exist');
+=======
+            console.log('localData is not exist');
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         } else {
             localData = JSON.parse(localData);
             if (localData.uid == '') {
@@ -170,7 +174,11 @@ cc.Class({
             }
         }
         let callback = function (res) {
+<<<<<<< HEAD
             // console.log(res);
+=======
+            console.log(res);
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
             self.worldList = res.world;
             self.teamList = res.team;
         };

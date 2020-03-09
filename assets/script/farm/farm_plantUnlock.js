@@ -40,11 +40,16 @@ cc.Class({
         // 播动画
         this.playUnlockAnimation(this.node_unlockAnimation);
 
+<<<<<<< HEAD
         // console.log(type, '43,plantunlock');
+=======
+        console.log(type, '43,plantunlock');
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
 
         this.changeSpriteView(this.node_view, this.viewList, type);
         let name = FarmData.plantInfo[type].name;
         this.changeLabelContent(this.node_name, name);
+<<<<<<< HEAD
         this.viewNodeBreathEffect(this.node_view);
     },
 
@@ -59,12 +64,19 @@ cc.Class({
     },
 
 
+=======
+    },
+
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
     hideView() {
         this.node_unlockAnimation.active = false;
         // 关闭界面，增送种子。
         this.node.active = false;
         this.sendRequestToAnimaLayer();
+<<<<<<< HEAD
         this.node_view.stopAllActions();
+=======
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
 
     },
 
@@ -96,7 +108,11 @@ cc.Class({
 
 
     start() {
+<<<<<<< HEAD
         this.showView(1);
+=======
+
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
     },
 
     // update (dt) {},

@@ -139,7 +139,11 @@ cc.Class({
                 // console.log('不可以改名');
             }
         } else {
+<<<<<<< HEAD
             // console.log('可以改名')
+=======
+            console.log('可以改名')
+>>>>>>> 662237983afb394cd7d49d6a606109dc170a97d9
         }
     },
 
